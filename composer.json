@@ -1,0 +1,28 @@
+{
+    "name": "phpactor/config-loader",
+    "description": "Library to load (user) configuration",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Leech",
+            "email": "daniel@dantleech.com"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.10.5",
+        "phpunit/phpunit": "^7.4",
+        "friendsofphp/php-cs-fixer": "^2.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phpactor\\ConfigLoader\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phpactor\\ConfigLoader\\Tests\\": "tests/"
+        }
+    }
+}
