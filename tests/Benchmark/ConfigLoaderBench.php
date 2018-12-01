@@ -5,6 +5,7 @@ namespace Phpactor\ConfigLoader\Tests\Benchmark;
 use Phpactor\ConfigLoader\Adapter\Deserializer\JsonDeserializer;
 use Phpactor\ConfigLoader\Adapter\Deserializer\YamlDeserializer;
 use Phpactor\ConfigLoader\Adapter\PathCandidate\AbsolutePathCandidate;
+use Phpactor\ConfigLoader\ConfigLoaderBuilder;
 use Phpactor\ConfigLoader\Core\ConfigLoader;
 use Phpactor\ConfigLoader\Core\Deserializers;
 use Phpactor\ConfigLoader\Core\PathCandidates;
@@ -62,6 +63,15 @@ class ConfigLoaderBench extends TestCase
             ])
         );
         $loader->load();
+    }
+
+    public function benchJsonLoadConfigWithBuilder()
+    {
+        ConfigLoaderBuilder::create()
+            ->enableJsonDeserializer('json')
+            ->addCandidate($this->config1, 'json')
+            ->addCandidate($this->config2, 'json')
+            ->load();
     }
 
     public function benchJsonLoadConfigWithNonExistingYaml()

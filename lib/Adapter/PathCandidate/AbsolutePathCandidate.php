@@ -25,7 +25,8 @@ class AbsolutePathCandidate implements PathCandidate
 
         if ('/' !== $absolutePath[0] && '\\' !== $absolutePath[0]) {
             throw new RuntimeException(sprintf(
-                'Path is not absolute "%s"', $absolutePath
+                'Path is not absolute "%s"',
+                $absolutePath
             ));
         }
     }
