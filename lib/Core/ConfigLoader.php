@@ -31,7 +31,7 @@ class ConfigLoader
             $config = array_replace_recursive(
                 $config,
                 $this->deserializers->get($candidate->loader())->deserialize(
-                    file_get_contents($candidate->path())
+                    (string) file_get_contents($candidate->path())
                 )
             );
         }
