@@ -2,8 +2,6 @@
 
 namespace Phpactor\ConfigLoader\Core;
 
-use Phpactor\ConfigLoader\Core\Deserializers;
-
 class ConfigLoader
 {
     /**

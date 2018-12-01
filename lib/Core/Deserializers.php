@@ -3,8 +3,6 @@
 namespace Phpactor\ConfigLoader\Core;
 
 use Phpactor\ConfigLoader\Core\Exception\DeserializerNotFound;
-use RuntimeException;
-use Phpactor\ConfigLoader\Core\Deserializer;
 
 class Deserializers
 {
@@ -25,7 +23,8 @@ class Deserializers
         if (!isset($this->deserializerMap[$extension])) {
             throw new DeserializerNotFound(sprintf(
                 'No deserializer registered for extension "%s", deserializers available for: "%s"',
-                $extension, implode('", "', array_keys($this->deserializerMap))
+                $extension,
+                implode('", "', array_keys($this->deserializerMap))
             ));
         }
 

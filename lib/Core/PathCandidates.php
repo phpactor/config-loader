@@ -2,7 +2,6 @@
 
 namespace Phpactor\ConfigLoader\Core;
 
-use Generator;
 use IteratorAggregate;
 
 class PathCandidates implements IteratorAggregate

@@ -5,10 +5,8 @@ namespace Phpactor\ConfigLoader\Tests\Benchmark;
 use Phpactor\ConfigLoader\Adapter\Deserializer\JsonDeserializer;
 use Phpactor\ConfigLoader\Adapter\Deserializer\YamlDeserializer;
 use Phpactor\ConfigLoader\Adapter\PathCandidate\AbsolutePathCandidate;
-use Phpactor\ConfigLoader\Adapter\PathCandidate\XdgPathCandidate;
 use Phpactor\ConfigLoader\Core\ConfigLoader;
 use Phpactor\ConfigLoader\Core\Deserializers;
-use Phpactor\ConfigLoader\Core\PathCandidate;
 use Phpactor\ConfigLoader\Core\PathCandidates;
 use Phpactor\ConfigLoader\Tests\TestCase;
 

@@ -8,7 +8,6 @@ use Phpactor\ConfigLoader\Core\Deserializer;
 use Phpactor\ConfigLoader\Core\Deserializers;
 use Phpactor\ConfigLoader\Core\PathCandidates;
 use Phpactor\ConfigLoader\Tests\TestCase;
-use Phpactor\TestUtils\Workspace;
 
 class ConfigLoaderTest extends TestCase
 {

@@ -11,7 +11,8 @@ class YamlDeserializerTest extends TestCase
     public function testExceptionOnInvalid()
     {
         $this->expectException(CouldNotDeserialize::class);
-        (new YamlDeserializer())->deserialize(<<<'EOT'
+        (new YamlDeserializer())->deserialize(
+            <<<'EOT'
 asd 
  \t 
 a
@@ -23,7 +24,8 @@ EOT
 
     public function testDeserialize()
     {
-        $config = (new YamlDeserializer())->deserialize(<<<'EOT'
+        $config = (new YamlDeserializer())->deserialize(
+            <<<'EOT'
 one:
    two: three
 EOT

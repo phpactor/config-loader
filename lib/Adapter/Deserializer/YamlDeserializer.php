@@ -23,7 +23,7 @@ class YamlDeserializer implements Deserializer
     {
         try {
             return $this->parser->parse($contents);
-        } catch(ParseException $exception) {
+        } catch (ParseException $exception) {
             throw new CouldNotDeserialize(sprintf(
                 'Could not deserialize YAML, error from parser "%s"',
                 $exception->getMessage()
