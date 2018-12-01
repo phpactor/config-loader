@@ -57,7 +57,7 @@ class ConfigLoaderTest extends TestCase
             ])
         );
 
-        $this->deserializer->load('test')->willReturn([
+        $this->deserializer->deserialize('test')->willReturn([
             'one' => 'two'
         ]);
 
@@ -72,12 +72,12 @@ class ConfigLoaderTest extends TestCase
     {
         $loader = $this->createTwoFileLoader();
 
-        $this->deserializer->load('test1')->willReturn([
+        $this->deserializer->deserialize('test1')->willReturn([
             'one' => 'two',
             'two' => 'three',
         ]);
 
-        $this->deserializer->load('test2')->willReturn([
+        $this->deserializer->deserialize('test2')->willReturn([
             'one' => 'four',
             'two' => 'three',
         ]);
@@ -93,13 +93,13 @@ class ConfigLoaderTest extends TestCase
     {
         $loader = $this->createTwoFileLoader();
 
-        $this->deserializer->load('test1')->willReturn([
+        $this->deserializer->deserialize('test1')->willReturn([
             'one' => [
                 'two' => 'three',
             ],
         ]);
 
-        $this->deserializer->load('test2')->willReturn([
+        $this->deserializer->deserialize('test2')->willReturn([
             'one' => [
                 'two' => 'three',
                 'three' => 'four',
