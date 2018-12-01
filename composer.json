@@ -29,5 +29,8 @@
         "psr-4": {
             "Phpactor\\ConfigLoader\\Tests\\": "tests/"
         }
+    },
+    "branch-alias": {
+        "dev-master": "1.0.x-dev"
     }
 }
