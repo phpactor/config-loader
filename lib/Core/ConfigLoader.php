@@ -38,4 +38,9 @@ class ConfigLoader
 
         return $config;
     }
+
+    public function candidates(): PathCandidates
+    {
+        return $this->candidates;
+    }
 }

@@ -53,11 +53,11 @@ class ConfigLoaderBuilder
         return $this;
     }
 
-    public function load(): array
+    public function loader(): ConfigLoader
     {
-        return (new ConfigLoader(
+        return new ConfigLoader(
             new Deserializers($this->serializers),
             new PathCandidates($this->candidates)
-        ))->load();
+        );
     }
 }
