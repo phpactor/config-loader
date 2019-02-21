@@ -11,10 +11,15 @@ class YamlDeserializerTest extends TestCase
     public function testExceptionOnInvalid()
     {
         $this->expectException(CouldNotDeserialize::class);
+        $this->expectExceptionMessage(
+            <<<'EOT'
+Could not deserialize YAML, error from parser "Unable to parse at line 1 (near "asd")."
+EOT
+        );
         (new YamlDeserializer())->deserialize(
             <<<'EOT'
-asd 
- \t 
+asd
+ \t
 a
  1235
      123
