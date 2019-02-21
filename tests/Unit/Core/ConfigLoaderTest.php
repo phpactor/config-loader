@@ -17,7 +17,7 @@ class ConfigLoaderTest extends TestCase
     private $deserializer;
 
 
-    public function setUp()
+    protected function setUp()
     {
         parent::setUp();
         $this->deserializer = $this->prophesize(Deserializer::class);
@@ -120,7 +120,7 @@ class ConfigLoaderTest extends TestCase
         $configFile2 = $this->workspace->path('barfoo.test');
         file_put_contents($configFile1, 'test1');
         file_put_contents($configFile2, 'test2');
-        
+
         $loader = new ConfigLoader(
             new Deserializers([
                 'test' => $this->deserializer->reveal()
