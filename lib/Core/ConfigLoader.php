@@ -2,6 +2,8 @@
 
 namespace Phpactor\ConfigLoader\Core;
 
+use RuntimeException;
+
 class ConfigLoader
 {
     /**
@@ -34,6 +36,12 @@ class ConfigLoader
                     (string) file_get_contents($candidate->path())
                 )
             );
+
+            if (null === $config) {
+                throw new RuntimeException(
+                    'Error occured in array_replace_recursive'
+                );
+            }
         }
 
         return $config;
