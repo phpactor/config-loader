@@ -20,10 +20,11 @@ class AbsolutePathCandidate implements PathCandidate
 
     public function __construct(string $absolutePath, string $loader)
     {
+        $absolutePath = Path::canonicalize($absolutePath);
         $this->absolutePath = $absolutePath;
         $this->loader = $loader;
 
-        if ('/' !== $absolutePath[0] && '\\' !== $absolutePath[0]) {
+        if (!Path::isAbsolute($absolutePath)) {
             throw new RuntimeException(sprintf(
                 'Path is not absolute "%s"',
                 $absolutePath
