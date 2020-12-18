@@ -1,7 +1,7 @@
 Config Loader
 =============
 
-[![Build Status](https://travis-ci.org/phpactor/config-loader.svg?branch=master)](https://travis-ci.org/phpactor/config-loader)
+![CI](https://github.com/phpactor/config-loader/workflows/CI/badge.svg)
 
 Library to load an application configuration file
 
