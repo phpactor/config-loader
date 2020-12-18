@@ -1,0 +1,87 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Adapter\\\\Deserializer\\\\JsonDeserializer\\:\\:deserialize\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: lib/Adapter/Deserializer/JsonDeserializer.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Adapter\\\\Deserializer\\\\YamlDeserializer\\:\\:deserialize\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: lib/Adapter/Deserializer/YamlDeserializer.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\ConfigLoaderBuilder\\:\\:addXdgCandidate\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: lib/ConfigLoaderBuilder.php
+
+		-
+			message: "#^Property Phpactor\\\\ConfigLoader\\\\Core\\\\ConfigLoader\\:\\:\\$candidates type has no value type specified in iterable type Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates\\.$#"
+			count: 1
+			path: lib/Core/ConfigLoader.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\ConfigLoader\\:\\:__construct\\(\\) has parameter \\$candidates with no value type specified in iterable type Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates\\.$#"
+			count: 1
+			path: lib/Core/ConfigLoader.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\ConfigLoader\\:\\:load\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: lib/Core/ConfigLoader.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between null and array will always evaluate to false\\.$#"
+			count: 1
+			path: lib/Core/ConfigLoader.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\ConfigLoader\\:\\:candidates\\(\\) return type has no value type specified in iterable type Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates\\.$#"
+			count: 1
+			path: lib/Core/ConfigLoader.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\Deserializer\\:\\:deserialize\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: lib/Core/Deserializer.php
+
+		-
+			message: "#^Property Phpactor\\\\ConfigLoader\\\\Core\\\\Deserializers\\:\\:\\$deserializerMap type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: lib/Core/Deserializers.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\Deserializers\\:\\:__construct\\(\\) has parameter \\$deserializerMap with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: lib/Core/Deserializers.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\Deserializers\\:\\:add\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: lib/Core/Deserializers.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\Deserializers\\:\\:add\\(\\) has parameter \\$deserializerExtension with no typehint specified\\.$#"
+			count: 1
+			path: lib/Core/Deserializers.php
+
+		-
+			message: "#^Class Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates implements generic interface IteratorAggregate but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: lib/Core/PathCandidates.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates\\:\\:__construct\\(\\) has parameter \\$candidates with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: lib/Core/PathCandidates.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates\\:\\:getIterator\\(\\) return type has no value type specified in iterable type Traversable\\<mixed, mixed\\>\\.$#"
+			count: 1
+			path: lib/Core/PathCandidates.php
+
+		-
+			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates\\:\\:add\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: lib/Core/PathCandidates.php
+
