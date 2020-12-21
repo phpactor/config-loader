@@ -14,7 +14,7 @@ class DeserializersTest extends TestCase
      */
     private $deserializer;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->deserializer = $this->prophesize(Deserializer::class);
     }

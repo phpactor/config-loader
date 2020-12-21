@@ -38,7 +38,7 @@ class ConfigLoaderBench extends TestCase
      */
     private $config2yaml;
 
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->config1 = $this->workspace->path('config1.json');
