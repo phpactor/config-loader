@@ -17,7 +17,7 @@ class ConfigLoaderTest extends TestCase
     private $deserializer;
 
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->deserializer = $this->prophesize(Deserializer::class);
