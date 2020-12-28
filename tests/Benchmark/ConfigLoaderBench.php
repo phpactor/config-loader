@@ -71,7 +71,7 @@ class ConfigLoaderBench extends TestCase
             ->enableJsonDeserializer('json')
             ->addCandidate($this->config1, 'json')
             ->addCandidate($this->config2, 'json')
-            ->load();
+            ->loader()->load();
     }
 
     public function benchJsonLoadConfigWithNonExistingYaml()
