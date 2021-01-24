@@ -8,7 +8,7 @@ use Phpactor\ConfigLoader\Tests\TestCase;
 
 class JsonDeserializerTest extends TestCase
 {
-    public function testThrowsExceptionIfInvalidJson()
+    public function testThrowsExceptionIfInvalidJson(): void
     {
         $this->expectException(CouldNotDeserialize::class);
         (new JsonDeserializer())->deserialize('FOo BAR');

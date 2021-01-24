@@ -28,7 +28,7 @@ class PathCandidates implements IteratorAggregate
         }
     }
 
-    private function add(PathCandidate $candidate)
+    private function add(PathCandidate $candidate): void
     {
         $this->candidates[] = $candidate;
     }

@@ -31,7 +31,7 @@ class Deserializers
         return $this->deserializerMap[$extension];
     }
 
-    private function add($deserializerExtension, Deserializer $deserializer)
+    private function add($deserializerExtension, Deserializer $deserializer): void
     {
         $this->deserializerMap[$deserializerExtension] = $deserializer;
     }

@@ -8,27 +8,27 @@ use Phpactor\ConfigLoader\Tests\TestCase;
 
 class YamlDeserializerTest extends TestCase
 {
-    public function testExceptionOnInvalid()
+    public function testExceptionOnInvalid(): void
     {
         $this->expectException(CouldNotDeserialize::class);
         (new YamlDeserializer())->deserialize(
             <<<'EOT'
-asd 
- \t 
-a
- 1235
-     123
-EOT
+                asd 
+                 \t 
+                a
+                 1235
+                     123
+                EOT
         );
     }
 
-    public function testDeserialize()
+    public function testDeserialize(): void
     {
         $config = (new YamlDeserializer())->deserialize(
             <<<'EOT'
-one:
-   two: three
-EOT
+                one:
+                   two: three
+                EOT
         );
 
         $this->assertEquals([

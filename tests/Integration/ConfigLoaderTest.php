@@ -7,7 +7,7 @@ use Phpactor\ConfigLoader\Tests\TestCase;
 
 class ConfigLoaderTest extends TestCase
 {
-    public function testLoadsConfigurationInOrderDeclared()
+    public function testLoadsConfigurationInOrderDeclared(): void
     {
         $path1 = $this->createConfig('one.json', [ 'one' => [ 'two' => 'three' ] ]);
         $path2 = $this->createConfig('two.json', [ 'one' => [ 'two' => 'four' ] ]);
