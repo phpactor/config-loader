@@ -19,7 +19,7 @@ class DeserializersTest extends TestCase
         $this->deserializer = $this->prophesize(Deserializer::class);
     }
 
-    public function testExceptionOnUnregisteredLoader()
+    public function testExceptionOnUnregisteredLoader(): void
     {
         $this->expectException(DeserializerNotFound::class);
         $this->expectExceptionMessage('No deserializer registered');

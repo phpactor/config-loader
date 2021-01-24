@@ -23,14 +23,14 @@ class ConfigLoaderTest extends TestCase
         $this->deserializer = $this->prophesize(Deserializer::class);
     }
 
-    public function testDoesNothingWhenEmpty()
+    public function testDoesNothingWhenEmpty(): void
     {
         $loader = new ConfigLoader(new Deserializers([]), new PathCandidates([]));
         $config = $loader->load();
         $this->assertEquals([], $config);
     }
 
-    public function testIgnoresNotExistingConfigs()
+    public function testIgnoresNotExistingConfigs(): void
     {
         $loader = new ConfigLoader(new Deserializers([]), new PathCandidates([
             new AbsolutePathCandidate($this->workspace->path('foobar'), 'nope')
@@ -39,7 +39,7 @@ class ConfigLoaderTest extends TestCase
         $this->assertEquals([], $config);
     }
 
-    public function testLoadsConfig()
+    public function testLoadsConfig(): void
     {
         $configFile = $this->workspace->path('foobar.test');
         file_put_contents($configFile, 'test');
@@ -67,7 +67,7 @@ class ConfigLoaderTest extends TestCase
         ], $config);
     }
 
-    public function testMergesConfigsFromFirstToLast()
+    public function testMergesConfigsFromFirstToLast(): void
     {
         $loader = $this->createTwoFileLoader();
 
@@ -88,7 +88,7 @@ class ConfigLoaderTest extends TestCase
         ], $config);
     }
 
-    public function testMergesNestedKeys()
+    public function testMergesNestedKeys(): void
     {
         $loader = $this->createTwoFileLoader();
 

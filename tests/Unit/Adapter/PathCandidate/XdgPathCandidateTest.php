@@ -7,7 +7,7 @@ use Phpactor\ConfigLoader\Adapter\PathCandidate\XdgPathCandidate;
 
 class XdgPathCandidateTest extends TestCase
 {
-    public function testCandidate()
+    public function testCandidate(): void
     {
         $candidate = new XdgPathCandidate('phpactor', 'phpactor', 'foo');
         $this->assertStringContainsString('phpactor', $candidate->path());

@@ -51,7 +51,7 @@ class ConfigLoaderBench extends TestCase
         file_put_contents($this->config2yaml, 'two: three');
     }
 
-    public function benchJsonLoadConfig()
+    public function benchJsonLoadConfig(): void
     {
         $loader = new ConfigLoader(
             new Deserializers([
@@ -65,7 +65,7 @@ class ConfigLoaderBench extends TestCase
         $loader->load();
     }
 
-    public function benchJsonLoadConfigWithBuilder()
+    public function benchJsonLoadConfigWithBuilder(): void
     {
         ConfigLoaderBuilder::create()
             ->enableJsonDeserializer('json')
@@ -74,7 +74,7 @@ class ConfigLoaderBench extends TestCase
             ->loader()->load();
     }
 
-    public function benchJsonLoadConfigWithNonExistingYaml()
+    public function benchJsonLoadConfigWithNonExistingYaml(): void
     {
         $loader = new ConfigLoader(
             new Deserializers([
@@ -91,7 +91,7 @@ class ConfigLoaderBench extends TestCase
         $loader->load();
     }
 
-    public function benchJsonPlainPhp()
+    public function benchJsonPlainPhp(): void
     {
         $config = array_merge(
             json_decode(file_get_contents($this->config1), true),
@@ -99,7 +99,7 @@ class ConfigLoaderBench extends TestCase
         );
     }
 
-    public function benchYamlLoadConfig()
+    public function benchYamlLoadConfig(): void
     {
         $loader = new ConfigLoader(
             new Deserializers([

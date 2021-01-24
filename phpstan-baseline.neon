@@ -56,11 +56,6 @@ parameters:
 			path: lib/Core/Deserializers.php
 
 		-
-			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\Deserializers\\:\\:add\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: lib/Core/Deserializers.php
-
-		-
 			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\Deserializers\\:\\:add\\(\\) has parameter \\$deserializerExtension with no typehint specified\\.$#"
 			count: 1
 			path: lib/Core/Deserializers.php
@@ -77,11 +72,6 @@ parameters:
 
 		-
 			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates\\:\\:getIterator\\(\\) return type has no value type specified in iterable type Traversable\\<mixed, mixed\\>\\.$#"
-			count: 1
-			path: lib/Core/PathCandidates.php
-
-		-
-			message: "#^Method Phpactor\\\\ConfigLoader\\\\Core\\\\PathCandidates\\:\\:add\\(\\) has no return typehint specified\\.$#"
 			count: 1
 			path: lib/Core/PathCandidates.php
 
