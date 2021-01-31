@@ -16,8 +16,8 @@
     "require-dev": {
         "ergebnis/composer-normalize": "^2.0",
         "friendsofphp/php-cs-fixer": "^2.17",
-        "phpactor/test-utils": "^1.0",
-        "phpbench/phpbench": "^1.0.0-alpha5",
+        "phpactor/test-utils": "~1.1.3",
+        "phpbench/phpbench": "dev-master",
         "phpstan/phpstan": "~0.12.0",
         "phpunit/phpunit": "^9.0",
         "symfony/yaml": "^4.2",
